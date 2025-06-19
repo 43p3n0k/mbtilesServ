@@ -1,0 +1,18 @@
+server:
+    datasource:
+        raster:
+            driverClassName: org.sqlite.JDBC
+        vector:
+            driverClassName: org.sqlite.JDBC
+    port: 8080
+spring:
+    application:
+        name: mbtilesServ
+    datasource:
+        raster:
+            url: jdbc:sqlite:./mbtiles/map_0-7.mbtiles
+        vector:
+            url: jdbc:sqlite:./mbtiles/osm-2020-02-10-v3.11_europe_cyprus.mbtiles
+    jpa:
+        database-platform: org.hibernate.community.dialect.SQLiteDialect
+        open-in-view: false
